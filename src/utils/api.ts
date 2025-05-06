@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { ExchangeRateData, Currency } from '../types';
 
-const API_KEY = '43fa388d3632a0e29f51b3d2';
+const API_KEY = import.meta.env.REACT_APP_API_KEY;
 const BASE_URL = 'https://v6.exchangerate-api.com/v6';
-
 const exchangeRateApi = axios.create({
   baseURL: BASE_URL,
   timeout: 10000,
